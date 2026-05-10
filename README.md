@@ -1,7 +1,3 @@
-HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:ac98808ca8691629964491ed3e47eaabccc49dbfe68d56946b7e10b6b8020bd4
-size 7140
 # RadioIndustryMap
 
 **RadioIndustryMap** is a large-scale, high-fidelity, time-varying electromagnetic (EM) / radio map dataset for **Electromagnetic Map Reconstruction**, **Radio Environment Mapping (REM)**, and **6G Industrial Internet of Things (IIoT)** research.
@@ -27,7 +23,7 @@ The complete release of RadioIndustryMap is expected to include:
 | Number of scenes   | Approximately 800 scenes                                     |
 | Number of samples  | Approximately 400,000 radio map samples                      |
 | Scenario types     | Automated chemical plants, smart container ports, offshore industrial zones |
-| Frequency bands    | 500 MHz, 700 MHz, 900 MHz, 1500 MHz, 2100 MHz, 3500 MHz, 4900 MHz, 5000 MHz, 5800 MHz |
+| Frequency bands    | 500 MHz, 700 MHz, 900 MHz, 1500 MHz, 2100 MHz, 3500 MHz, 4900 MHz, 5800 MHz |
 | Receiver heights   | 1.5 m, 5 m, 10 m, 20 m, 60 m                                 |
 | Temporal frames    | 50 frames per dynamic sequence                               |
 | Time interval      | 2 seconds                                                    |
@@ -42,6 +38,10 @@ Each radio map sample corresponds to a specific scenario, carrier frequency, rec
 The following table shows representative examples from three scenario types. Each row contains a geographic map in `.png` format and the corresponding 50-time-slot dynamic radio map sequence in `.gif` format.
 
 <table>
+     <colgroup>
+    <col style="width:42%;">
+    <col style="width:58%;">
+  </colgroup>
   <tr>
     <th align="center">Geographic Map (.png)</th>
     <th align="center">50-Time-Slot Radio Map Sequence (.gif)</th>
@@ -49,34 +49,35 @@ The following table shows representative examples from three scenario types. Eac
   <tr>
     <td align="center">
       <b>Automated Chemical Plant</b><br>
-      <img src="map870.png" width="420">
+      <img src="./example_image/factory.png" width="420">
     </td>
     <td align="center">
       <b>Automated Chemical Plant</b><br>
-      <img src="map870_receiver1.5m.gif" width="420">
+      <img src="./example_image/factory.gif" width="420">
     </td>
   </tr>
   <tr>
     <td align="center">
       <b>Smart Container Port</b><br>
-      <img src="assets/smart_container_port_geographic_map.png" width="420">
+      <img src="./example_image/port.png" width="420">
     </td>
     <td align="center">
       <b>Smart Container Port</b><br>
-      <img src="assets/smart_container_port_dynamic_radio_map.gif" width="420">
+      <img src="./example_image/port.gif" width="420">
     </td>
   </tr>
   <tr>
     <td align="center">
       <b>Offshore Industrial Zone</b><br>
-      <img src="assets/offshore_industrial_zone_geographic_map.png" width="420">
+      <img src="./example_image/offshore.png" width="420">
     </td>
     <td align="center">
       <b>Offshore Industrial Zone</b><br>
-      <img src="assets/offshore_industrial_zone_dynamic_radio_map.gif" width="420">
+      <img src="./example_image/offshore.gif" width="420">
     </td>
   </tr>
 </table>
+
 
 ---
 
@@ -113,6 +114,3 @@ The currently released sample data are provided for academic demonstration and p
 ## 5. Contact
 
 If you have any questions about RadioIndustryMap, please open an issue in this repository or contact the project team.
-
-Email: wufanwww@bupt.edu.cn
->>>>>>> 97b836a508f09cc35a7d0dd965341a6217f778ac
