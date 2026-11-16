@@ -2,6 +2,9 @@
 
 **RadioIndustryMap** is a large-scale, high-fidelity, time-varying electromagnetic (EM) / radio map dataset for **Electromagnetic Map Reconstruction**, **Radio Environment Mapping (REM)**, and **6G Industrial Internet of Things (IIoT)** research.
 
+**Dataset Download:** The dataset files are hosted on Baidu Netdisk. This repository provides dataset documentation, representative samples, and visualization examples.(The data currently available through this link represent 50% of the complete dataset. The complete RadioIndustryMap dataset, benchmark splits, detailed metadata, paper information, and citation will be publicly released after the corresponding paper is accepted.)
+
+> **Baidu Netdisk:**   https://pan.baidu.com/s/1nmZkMQd0dkofBj4MvMX3dQ?pwd=ucg8
 ---
 
 ## 1. Dataset Description
@@ -9,8 +12,6 @@
 Unlike conventional radio map datasets that mainly focus on  transmitters in simplified urban environments, RadioIndustryMap targets realistic industrial and offshore scenarios with **mobile transmitters**, **dynamic radio propagation**, **heterogeneous material compositions**, and **complex industrial geometries**. It explicitly models representative industrial materials and objects, including metal structures, concrete buildings, vegetation, road surfaces, water surfaces, industrial facilities, containers, pipelines, storage tanks, and moving vessels.
 
 RadioIndustryMap is needed because existing radio map datasets mainly focus on static, concrete-dominated urban environments and cannot fully capture the complex propagation mechanisms of industrial 6G IIoT scenarios. In realistic industrial and offshore deployments, heterogeneous materials, dense metallic infrastructures, water surfaces, mobile transmitters, and dynamic scatterers jointly introduce severe multipath, material-dependent reflection and attenuation, dynamic blockage, and time-varying spatial correlations. RadioIndustryMap is therefore designed to provide physically realistic, time-varying, and material-aware radio maps for robust learning-based reconstruction and radio environment mapping.
-
-At the current stage, this repository provides **representative sample data and visualization examples** only. The complete RadioIndustryMap dataset, benchmark splits, detailed metadata, paper information, and citation will be publicly released after the corresponding paper is accepted.
 
 ---
 
@@ -83,11 +84,11 @@ The following table shows representative examples from three scenario types. Eac
 
 ## 3. Folders in the Repository
 
-`RadioIndustryMap/<Scenario>/<Frequency>/<Height>/npy/`: Raw radio map matrices in `.npy` format for model training and evaluation. Each file is named as `mapx_hm_t=y.npy`, where `mapx` denotes the scenario or map index, `hm` denotes the receiver height, and `t=y` denotes the temporal frame index. Example files include `map1_1.5m_t=1.npy` and `map1_1.5m_t=50.npy`.
+`RadioIndustryMap/<Scenario>/<Frequency>/npy/`: Raw radio map matrices in `.npy` format for model training and evaluation. Each file is named as `mapx_receiverm_frequencyf_t=y.npy`, where `mapx` denotes the scenario or map index, `receiverm` denotes the receiver height, and `frequencyf` denotes the frequency, `t=y` denotes the temporal frame index. Example files include `map1_receiver1.5m_frequency500Mhz_t=1.npy` and `map1_receiverm1.5m_frequency500Mhz_t=50.npy`.
 
-`RadioIndustryMap/<Scenario>/<Frequency>/<Height>/png/`: Visualization images of the corresponding radio maps in `.png` format. Each file follows the same naming rule as the matrix files, such as `map1_1.5m_t=1.png`.
+`RadioIndustryMap/<Scenario>/<Frequency>/png/`: Visualization images of the corresponding radio maps in `.png` format. Each file follows the same naming rule as the matrix files, such as `map1_receiver1.5m_frequency500Mhz_t=1.png`.
 
-`RadioIndustryMap/<Scenario>/<Frequency>/<Height>/gif/`: Animated visualizations of continuous time-varying radio map sequences in `.gif` format. Each file is named as `mapx_hm.gif`, such as `map1_1.5m.gif`.
+`RadioIndustryMap/<Scenario>/<Frequency>/gif/`: Animated visualizations of continuous time-varying radio map sequences in `.gif` format. Each file is named as `mapx_receiverm_frequencyf.gif`, such as `map1_receiver1.5m_frequency500Mhz.gif`.
 
 `Global_Index/Building/`: Building spatial distribution information for the corresponding scenes. This folder includes building distribution matrices and `Building.zip`.
 
